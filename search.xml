@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search> 
+  
+  
+    
+    <entry>
+      <title>建站小记</title>
+      <link href="/2024/07/22/%E5%BB%BA%E7%AB%99%E5%B0%8F%E8%AE%B0/"/>
+      <url>/2024/07/22/%E5%BB%BA%E7%AB%99%E5%B0%8F%E8%AE%B0/</url>
+      
+        <content type="html"><![CDATA[<p>OK，从开始研究hexo博客到正式搭完Morizen-Studio差不多花了三四天时间，最开始是采用argvchs的<a href="https://github.com/theme-particlex/hexo-theme-particlex">particlex主题</a>，后来因为在本地运行时代码块显示有问题，后来决定换成Jerry的<a href="https://github.com/jerryc127/hexo-theme-butterfly.git">butterfly主题</a>。非常感谢各位开发者的努力，让我也能搭建起属于自己的博客。</p><p>以下是整个搭建过程中参考的一些文章：</p><p><a href="https://blog.csdn.net/qq_40670171/article/details/129635911?spm=1001.2101.3001.6650.4&utm_medium=distribute.pc_relevant.none-task-blog-2~default~BlogCommendFromBaidu~Ctr-4-129635911-blog-133269724.235%5Ev43%5Epc_blog_bottom_relevance_base5&depth_1-utm_source=distribute.pc_relevant.none-task-blog-2~default~BlogCommendFromBaidu~Ctr-4-129635911-blog-133269724.235%5Ev43%5Epc_blog_bottom_relevance_base5&utm_relevant_index=9">Hexo零成本搭建个人博客网站</a></p><p><a href="https://butterfly.js.org/posts/21cfbf15/">Butterfly 安裝文檔</a></p><p><a href="https://argvchs.github.io/2022/04/17/hexo-blog-1/">Hexo 博客搭建教程</a></p><p><a href="https://blog.csdn.net/qq_41467882/article/details/124734598">Hexo-Butterfly音乐播放器的添加</a></p><p>对了，顺便贴一个壁纸网站：<a href="https://wallhaven.cc/">wallhaven</a>，不开玩笑，真的很好用。</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 日志 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> record </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>编程题记录（1）打印回形数组</title>
+      <link href="/2024/07/15/hgy/"/>
+      <url>/2024/07/15/hgy/</url>
+      
+        <content type="html"><![CDATA[<p> 题目：输入一个整数N，打印出从1~N的N*N矩阵。<br>比如N &#x3D; 3，构成矩阵：<br>1,2,3,<br>8,9,4,<br>7,6,5,</p><p>比如N &#x3D; 4，构成矩阵：<br> 1, 2, 3, 4,<br>12,13,14, 5,<br>11,16,15, 6,<br>10, 9, 8, 7,</p><p>N&#x3D;5时，构成矩阵：<br> 1, 2, 3, 4, 5,<br>16,17,18,19, 6,<br>15,24,25,20, 7,<br>14,23,22,21, 8,<br>13,12,11,10, 9,</p><p>对于输入的整数，按行输出回形矩阵</p><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> java.util.Scanner;</span><br><span class="line"><span class="keyword">class</span> <span class="title class_">huixing</span>&#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String[]args)</span>&#123;</span><br><span class="line">        Scanner sc=<span class="keyword">new</span> <span class="title class_">Scanner</span>(System.in);</span><br><span class="line">        <span class="type">int</span> num=sc.nextInt();</span><br><span class="line">        <span class="type">int</span> num1=num;</span><br><span class="line">        <span class="type">int</span> arr[][]=<span class="keyword">new</span> <span class="title class_">int</span>[num][num];</span><br><span class="line">        <span class="type">int</span> result=<span class="number">1</span>,i=<span class="number">0</span>;</span><br><span class="line">        <span class="keyword">while</span>(i&lt;num)&#123;</span><br><span class="line">            <span class="keyword">for</span> (<span class="type">int</span> j=i; j &lt; num-<span class="number">1</span>; j++)&#123;</span><br><span class="line">                arr[i][j]=result;</span><br><span class="line">                result++;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">for</span> (<span class="type">int</span> j=i; j &lt; num-<span class="number">1</span>; j++) &#123;</span><br><span class="line">                arr[j][num-<span class="number">1</span>]=result;</span><br><span class="line">                result++;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">for</span> (<span class="type">int</span> <span class="variable">j</span> <span class="operator">=</span> num-<span class="number">1</span>; j &gt;num1-num ; j--) &#123;</span><br><span class="line">                arr[num-<span class="number">1</span>][j]=result;</span><br><span class="line">                result++;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">for</span> (<span class="type">int</span> <span class="variable">j</span> <span class="operator">=</span> num-<span class="number">1</span>; j &gt;num1-num ; j--) &#123;</span><br><span class="line">                arr[j][i]=result;</span><br><span class="line">                result++;</span><br><span class="line">            &#125;</span><br><span class="line">            num=num-<span class="number">1</span>;</span><br><span class="line">            i++;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span>(num1%<span class="number">2</span>!=<span class="number">0</span>)</span><br><span class="line">        &#123;</span><br><span class="line">            arr[num1/<span class="number">2</span>][num1/<span class="number">2</span>]=num1*num1;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">for</span>(i=<span class="number">0</span>;i&lt;num1;i++)&#123;</span><br><span class="line">            <span class="keyword">for</span>(<span class="type">int</span> j=<span class="number">0</span>;j&lt;num1;j++)&#123;</span><br><span class="line">                System.out.print(arr[i][j]+<span class="string">&quot; &quot;</span>);</span><br><span class="line">            &#125;</span><br><span class="line">            System.out.println();</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p>1、听说这是一道面试题</p><p>2、思路是把每轮对二维数组的赋值拆分为右、下、左、上，通过判断数组标号来决定是否改变方向</p><p>3、第一次完成时发现当输入的数n为奇数时，中间数，即原本值为n*n的数没法赋值。后面加了一个if来判断。</p><p>4、第一次写这个题时还是java初学者，思维上还是习惯于C的面向过程编程。</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 编程题 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> java </tag>
+            
+            <tag> exercises </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+  
+  
+</search>
