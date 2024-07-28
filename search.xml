@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>用java写一个增删改查系统</title>
+      <link href="/2024/07/28/%E7%94%A8java%E5%86%99%E4%B8%80%E4%B8%AA%E5%A2%9E%E5%88%A0%E6%94%B9%E6%9F%A5%E7%B3%BB%E7%BB%9F/"/>
+      <url>/2024/07/28/%E7%94%A8java%E5%86%99%E4%B8%80%E4%B8%AA%E5%A2%9E%E5%88%A0%E6%94%B9%E6%9F%A5%E7%B3%BB%E7%BB%9F/</url>
+      
+        <content type="html"><![CDATA[<p>这大概是每个学习计算机相关专业的中国大学生都会写的一个课程项目，我以前交上去的课程作业是C语言版的，最近自学java又写了一个java版的。</p><p>比较值得一提的是，在这次写的过程中我格外注意程序的健壮性，这算是一个小小的进步吧。主要是用了try-catch(InputMismatchException e)来规避了int型变量被莫名输入string的情况。</p><p>下面是运行时的大概样子。</p><p>具体程序我就放在GitHub里了。</p><p><img src="/images/52.png" alt="图片"></p><p><img src="/images/1.png" alt="图片"></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 项目 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> java </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>建站小记</title>
       <link href="/2024/07/22/%E5%BB%BA%E7%AB%99%E5%B0%8F%E8%AE%B0/"/>
       <url>/2024/07/22/%E5%BB%BA%E7%AB%99%E5%B0%8F%E8%AE%B0/</url>
